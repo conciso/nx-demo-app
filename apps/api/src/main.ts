@@ -15,7 +15,7 @@ async function bootstrap() {
   const port = environment.api_port;
   await app.listen(port, () => {
     Logger.log(
-      'Listening at localhost:' + environment.api_port + '/' + globalPrefix
+      `Listening at ${environment.api_url}:${environment.api_port}/${globalPrefix}`
     );
   });
 }
