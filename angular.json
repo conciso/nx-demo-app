@@ -25,7 +25,9 @@
               "apps/demo-app/src/favicon.ico",
               "apps/demo-app/src/assets"
             ],
-            "styles": ["apps/demo-app/src/styles.scss"],
+            "styles": [
+              "apps/demo-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -80,7 +82,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/demo-app/src/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/demo-app/src/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -88,6 +92,85 @@
           "options": {
             "jestConfig": "apps/demo-app/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "add": {
+          "builder": "@nxtend/capacitor:command",
+          "options": {
+            "command": "add",
+            "platform": ""
+          },
+          "configurations": {
+            "ios": {
+              "platform": "ios"
+            },
+            "android": {
+              "platform": "android"
+            }
+          }
+        },
+        "copy": {
+          "builder": "@nxtend/capacitor:command",
+          "options": {
+            "command": "copy",
+            "platform": ""
+          },
+          "configurations": {
+            "platform": "android",
+            "ios": {
+              "platform": "ios"
+            },
+            "android": {
+              "platform": "android"
+            }
+          }
+        },
+        "open": {
+          "builder": "@nxtend/capacitor:command",
+          "options": {
+            "command": "open",
+            "platform": ""
+          },
+          "configurations": {
+            "platform": "android",
+            "ios": {
+              "platform": "ios"
+            },
+            "android": {
+              "platform": "android"
+            }
+          }
+        },
+        "sync": {
+          "builder": "@nxtend/capacitor:command",
+          "options": {
+            "command": "sync",
+            "platform": ""
+          },
+          "configurations": {
+            "platform": "android",
+            "ios": {
+              "platform": "ios"
+            },
+            "android": {
+              "platform": "android"
+            }
+          }
+        },
+        "update": {
+          "builder": "@nxtend/capacitor:command",
+          "options": {
+            "command": "update",
+            "platform": ""
+          },
+          "configurations": {
+            "platform": "android",
+            "ios": {
+              "platform": "ios"
+            },
+            "android": {
+              "platform": "android"
+            }
           }
         }
       }
@@ -113,7 +196,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/demo-app-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/demo-app-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -131,7 +216,9 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": [
+              "apps/api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -156,7 +243,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/api/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/api/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -177,7 +266,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/api-interfaces/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/api-interfaces/**/*.ts"
+            ]
           }
         },
         "test": {
