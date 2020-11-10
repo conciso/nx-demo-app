@@ -1,0 +1,6 @@
+services:
+  api:
+    image: api
+    container_name: api
+    ports:
+      - '4444:4444'
